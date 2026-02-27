@@ -1,15 +1,12 @@
 > [!IMPORTANT]
 > 🌟 Stay up to date at [opendrivelab.com](https://opendrivelab.com/#news)!
 
-# DriveAGI
-This is **"The One"** project that [**`OpenDriveLab`**](https://opendrivelab.com/) is committed to contribute to the community, providing some thought and general picture of how to embrace `foundation models` into autonomous driving.
 
 ## Table of Contents
 - [NEWS](#news)
-- [At A Glance](#at-a-glance)
-- 🚀 [Vista](#vista) (NeurIPS 2024)
 - ⭐ [GenAD: OpenDV Dataset](#opendv) (CVPR 2024 Hightlight)
-- ⭐ [DriveLM](#drivelm) (ECCV 2024 Oral)
+- [Vista](#vista) (NeurIPS 2024)
+- [DriveLM](#drivelm) (ECCV 2024 Oral)
 - [DriveData Survey](#drivedata-survey) (SCIENTIA SINICA Informationis 2024)
   <!-- - [Abstract](#abstract)
   - [Related Work Collection](#related-work-collection) -->
@@ -35,51 +32,6 @@ We are excited to announce some update to [our survey](#drivedata-survey) and wo
 </details>
 
 
-## At A Glance
-
-<details>
-Here are some key components to construct a large foundation model curated for an autonomous system.
-
-![overview](assets/overview.png "overview")
-
-
-Below we would like to share the latest update from our team on the **`DriveData`** side. We will release the detail of the **`DriveEngine`** and the **`DriveAGI`** in the future.
-</details>
-
-## Vista
-<div id="top" align="center">
-<p align="center">
-<img src="assets/vista-teaser.gif" width="1000px" >
-</p>
-</div>
-
-> Simulated futures in a wide range of driving scenarios by [Vista](https://arxiv.org/abs/2405.17398). Best viewed on [demo page](https://vista-demo.github.io/).
-
-### [🌏 **A Generalizable Driving World Model with High Fidelity and Versatile Controllability**](https://arxiv.org/abs/2405.17398) (NeurIPS 2024)
-
-**Quick facts:**
-- Introducing the world's first **generalizable driving world model**.
-- Task: High-fidelity, action-conditioned, and long-horizon future prediction for driving scenes in the wild.
-- Dataset: [`OpenDV-YouTube`](https://github.com/OpenDriveLab/DriveAGI/tree/main/opendv), `nuScenes`
-- Code and model: https://github.com/OpenDriveLab/Vista
-- Video Demo: https://vista-demo.github.io
-- Related work: [Vista](https://arxiv.org/abs/2405.17398), [GenAD](https://arxiv.org/abs/2403.09630)
-
-```bibtex
-@inproceedings{gao2024vista,
- title={Vista: A Generalizable Driving World Model with High Fidelity and Versatile Controllability}, 
- author={Shenyuan Gao and Jiazhi Yang and Li Chen and Kashyap Chitta and Yihang Qiu and Andreas Geiger and Jun Zhang and Hongyang Li},
- booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
- year={2024}
-}
-
-@inproceedings{yang2024genad,
-  title={{Generalized Predictive Model for Autonomous Driving}},
-  author={Jiazhi Yang and Shenyuan Gao and Yihang Qiu and Li Chen and Tianyu Li and Bo Dai and Kashyap Chitta and Penghao Wu and Jia Zeng and Ping Luo and Jun Zhang and Andreas Geiger and Yu Qiao and Hongyang Li},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year={2024}
-}
-```
 
 ## GenAD: OpenDV Dataset <a name="opendv"></a>
 ![opendv](assets/opendv_examples.png)
@@ -118,7 +70,46 @@ Below we would like to share the latest update from our team on the **`DriveData
 }
 ```
 
+## Vista
+<div id="top" align="center">
+<p align="center">
+<img src="assets/vista-teaser.gif" width="1000px" >
+</p>
+</div>
+
+> Simulated futures in a wide range of driving scenarios by [Vista](https://arxiv.org/abs/2405.17398). Best viewed on [demo page](https://vista-demo.github.io/).
+<details>
+
+### [🌏 **A Generalizable Driving World Model with High Fidelity and Versatile Controllability**](https://arxiv.org/abs/2405.17398) (NeurIPS 2024)
+
+**Quick facts:**
+- Introducing the world's first **generalizable driving world model**.
+- Task: High-fidelity, action-conditioned, and long-horizon future prediction for driving scenes in the wild.
+- Dataset: [`OpenDV-YouTube`](https://github.com/OpenDriveLab/DriveAGI/tree/main/opendv), `nuScenes`
+- Code and model: https://github.com/OpenDriveLab/Vista
+- Video Demo: https://vista-demo.github.io
+- Related work: [Vista](https://arxiv.org/abs/2405.17398), [GenAD](https://arxiv.org/abs/2403.09630)
+
+```bibtex
+@inproceedings{gao2024vista,
+ title={Vista: A Generalizable Driving World Model with High Fidelity and Versatile Controllability}, 
+ author={Shenyuan Gao and Jiazhi Yang and Li Chen and Kashyap Chitta and Yihang Qiu and Andreas Geiger and Jun Zhang and Hongyang Li},
+ booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+ year={2024}
+}
+
+@inproceedings{yang2024genad,
+  title={{Generalized Predictive Model for Autonomous Driving}},
+  author={Jiazhi Yang and Shenyuan Gao and Yihang Qiu and Li Chen and Tianyu Li and Bo Dai and Kashyap Chitta and Penghao Wu and Jia Zeng and Ping Luo and Jun Zhang and Andreas Geiger and Yu Qiao and Hongyang Li},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2024}
+}
+```
+
+</details>
+
 ## DriveLM
+<details>
 Introducing the First benchmark on **Language Prompt for Driving**.
 
 **Quick facts:**
@@ -127,7 +118,7 @@ Introducing the First benchmark on **Language Prompt for Driving**.
 - Repo: https://github.com/OpenDriveLab/DriveLM, https://github.com/OpenDriveLab/ELM
 - Related work: [DriveLM](https://arxiv.org/abs/2312.14150), [ELM](https://arxiv.org/abs/2403.04593)
 - Related challenge: [Driving with Language AGC Challenge 2024](https://opendrivelab.com/challenge2024/#driving_with_language)
-
+</details>
 
 ## DriveData Survey
 <details>
