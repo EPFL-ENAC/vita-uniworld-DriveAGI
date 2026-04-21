@@ -34,7 +34,7 @@ def single_download(args):
         os.makedirs(path, exist_ok=True)
     
     try:
-        ret = os.system(f"{CONFIGS.method} -f '{CONFIGS.format}' -o '{path}/{filename}.%(ext)s' {url}")
+        ret = os.system(f"{CONFIGS.method} --sleep-requests {CONFIGS.sleep_requests} --sleep-interval {CONFIGS.sleep_interval} --max-sleep-interval {CONFIGS.max_sleep_interval} --download-archive {CONFIGS.download_archive} -f '{CONFIGS.format}' -o '{path}/{filename}.%(ext)s' {url}")
         if ret != 0:
             raise Exception("ERROR: Video unavailable or network error.")
     except Exception as e:
@@ -48,10 +48,15 @@ def multiple_download(video_list, configs):
 
     video_count = len(video_list)
     CONFIGS["method"] = configs["method"]
-    assert CONFIGS["method"] in ["youtube-dl", "yt-dlp"], "Only support `youtube-dl` and `yt-dlp`."
+    print(f"Using `{CONFIGS['method']}` for downloading videos.")
+    assert CONFIGS["method"] in ["youtube-dl", "yt-dlp"], f"Only support `youtube-dl` and `yt-dlp`."
     CONFIGS["format"] = configs["format"] if configs["method"] == "youtube-dl" else configs["format_for_ytdlp"]
     CONFIGS["root"] = configs.root
     CONFIGS["exception_file"] = configs.exception_file
+    CONFIGS["download_archive"] = configs.download_archive
+    CONFIGS["sleep_requests"] = configs.sleep_requests
+    CONFIGS["sleep_interval"] = configs.sleep_interval
+    CONFIGS["max_sleep_interval"] = configs.max_sleep_interval
     CONFIGS = EasyDict(CONFIGS)
     finished = 0
     with Pool(configs.num_workers) as p:
